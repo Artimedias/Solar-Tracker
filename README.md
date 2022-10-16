@@ -14,7 +14,8 @@ A simple javascript that takes in the users age and agab, then calculates their 
 VScode, javascript, babel, lint, jest Gitbash.
 
 ###Setup/Installation: 
-Clone this repository to wherever you wish, then open the folder with your prefered terminal, enter "npm run build", then open the code in your prefered IDE, and set up your own test on the solar.tests.js file.
+Clone this repository to wherever you wish, then open the folder with your prefered terminal, enter "npm run install" followed 
+by "npm run build", then open the code in your prefered IDE, and set up your own test on the solar.tests.js file.
 
 ###Known Bugs: 
 None
