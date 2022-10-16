@@ -1,9 +1,12 @@
-export default function user(age, sex) {
-this.age = age;
-this.sex = sex;
+export default class user {
+    constructor(age, sex) {
+      this.age = age;
+      this.sex = sex;
+    }
+
+checktype() {
+    let returnArray = [this.age, this.sex];
+    return returnArray;
 }
-
-user.prototype.checkType = function() {
-};
-
+}
   
