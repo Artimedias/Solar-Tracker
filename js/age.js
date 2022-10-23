@@ -67,7 +67,18 @@ let lifeleft = [];
 
 dog () {
   let woof = 0;
-  woof = this.age * 13.5;
+  switch (this.sex)
+  {
+    case 'pug':
+      woof = this.age * 13.5;
+      break;
+    case 'great dane':
+      woof = this.age * 9;
+      break;    
+    case 'labrador':
+      woof = this.age * 12.5;
+      break;    
+  }
   return woof;
 }
 }

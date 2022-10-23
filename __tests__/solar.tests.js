@@ -38,7 +38,6 @@ describe('left', () => {
     Jessica = new user(120, "female");
     Jenny = new user(20, "female");
     Jerry = new user(999, "male");
-    Jdog = new user(13, "pug")
   test('Should respond with the remaining life left for a 60 y/o male', () => {
     expect(James.lifeLeft(James.user)).toEqual([66.97, 26.08, 16.1, 8.53, 1.35, .54, .19, .09]);
   });
@@ -51,13 +50,19 @@ describe('left', () => {
   test('Should respond respond how much over the average lifespan a 999 y/o male is', () => {
     expect(Jerry.lifeLeft(Jerry.user)).toEqual([3839.27, 1495.1, 922.9, 489.14, 77.53, 31.39, 11.08, 5.54]);
   });
-
-  describe('dog', () => {
-
-    test('Should respond with the users age in dog years.', () => {
-      expect(Jdog.dog(Jdog.user)).toEqual(175.5);
-    });
-
-  });
 });
+  describe('dog', () => {
+    let Jpug = new user(13, "pug")
+    let Jdane = new user(6, "great dane")
+    let Jlab = new user(8, "labrador")
+    test('Should respond with the users age in dog years.', () => {
+      expect(Jpug.dog(Jpug.user)).toEqual(175.5);
+    });
+    test('Should respond with the users age in dog years.', () => {
+      expect(Jdane.dog(Jdane.user)).toEqual(54);
+    });
+    test('Should respond with the users age in dog years.', () => {
+      expect(Jlab.dog(Jlab.user)).toEqual(100);
+    });
+  });
 
