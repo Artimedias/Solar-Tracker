@@ -32,40 +32,32 @@ describe('left', () => {
   let James;
   let Jessica;
   let Jenny;
-  beforeEach(() => {
+  let Jerry;
+  let Jdog;
     James = new user(60, "male");
     Jessica = new user(120, "female");
     Jenny = new user(20, "female");
-  });
+    Jerry = new user(999, "male");
+    Jdog = new user(13, "pug")
   test('Should respond with the remaining life left for a 60 y/o male', () => {
-    expect(James.lifeLeft(James.user)[0]).toEqual(66.97);
-    expect(James.lifeLeft(James.user)[1]).toEqual(26.08);
-    expect(James.lifeLeft(James.user)[2]).toEqual(16.1);
-    expect(James.lifeLeft(James.user)[3]).toEqual(8.53);
-    expect(James.lifeLeft(James.user)[4]).toEqual(1.35);
-    expect(James.lifeLeft(James.user)[5]).toEqual(.54);
-    expect(James.lifeLeft(James.user)[6]).toEqual(.19);
-    expect(James.lifeLeft(James.user)[7]).toEqual(.09);
+    expect(James.lifeLeft(James.user)).toEqual([66.97, 26.08, 16.1, 8.53, 1.35, .54, .19, .09]);
   });
   test('Should respond how much over the average lifespan a 120 y/o female is', () => {
-    expect(Jessica.lifeLeft(Jessica.user)[0]).toEqual(161.83);
-    expect(Jessica.lifeLeft(Jessica.user)[1]).toEqual(63.02);
-    expect(Jessica.lifeLeft(Jessica.user)[2]).toEqual(38.90);
-    expect(Jessica.lifeLeft(Jessica.user)[3]).toEqual(20.62);
-    expect(Jessica.lifeLeft(Jessica.user)[4]).toEqual(3.27);
-    expect(Jessica.lifeLeft(Jessica.user)[5]).toEqual(1.33);
-    expect(Jessica.lifeLeft(Jessica.user)[6]).toEqual(0.47);
-    expect(Jessica.lifeLeft(Jessica.user)[7]).toEqual(0.24);
+    expect(Jessica.lifeLeft(Jessica.user)).toEqual([161.83, 63.02, 38.90, 20.62, 3.27, 1.33, 0.47, 0.24]);
   });
   test('Should respond with the remaining years to live for a 20 y/o female', () => {
-    expect(Jenny.lifeLeft(Jenny.user)[0]).toEqual(254.17);
-    expect(Jenny.lifeLeft(Jenny.user)[1]).toEqual(98.98);
-    expect(Jenny.lifeLeft(Jenny.user)[2]).toEqual(61.1);
-    expect(Jenny.lifeLeft(Jenny.user)[3]).toEqual(32.38);
-    expect(Jenny.lifeLeft(Jenny.user)[4]).toEqual(5.13);
-    expect(Jenny.lifeLeft(Jenny.user)[5]).toEqual(2.07);
-    expect(Jenny.lifeLeft(Jenny.user)[6]).toEqual(0.73);
-    expect(Jenny.lifeLeft(Jenny.user)[7]).toEqual(0.36);
+    expect(Jenny.lifeLeft(Jenny.user)).toEqual([254.17, 98.98, 61.1, 32.38, 5.13, 2.07, 0.73, 0.36]);
+  });
+  test('Should respond respond how much over the average lifespan a 999 y/o male is', () => {
+    expect(Jerry.lifeLeft(Jerry.user)).toEqual([3839.27, 1495.1, 922.9, 489.14, 77.53, 31.39, 11.08, 5.54]);
+  });
+
+  describe('dog', () => {
+
+    test('Should respond with the users age in dog years.', () => {
+      expect(Jdog.dog(Jdog.user)).toEqual(5.93);
+    });
+
   });
 });
 
