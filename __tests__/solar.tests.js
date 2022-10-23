@@ -55,7 +55,7 @@ describe('left', () => {
   describe('dog', () => {
 
     test('Should respond with the users age in dog years.', () => {
-      expect(Jdog.dog(Jdog.user)).toEqual(5.93);
+      expect(Jdog.dog(Jdog.user)).toEqual(175.5);
     });
 
   });

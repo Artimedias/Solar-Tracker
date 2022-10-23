@@ -67,6 +67,7 @@ let lifeleft = [];
 
 dog () {
   let woof = 0;
+  woof = this.age * 13.5;
   return woof;
 }
 }
